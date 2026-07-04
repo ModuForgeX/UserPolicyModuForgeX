@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Road Inspector - Terms & Conditions</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#ececec;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.container{
+    width:900px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    overflow:hidden;
+}
+
+header{
+    background:#222;
+    color:white;
+    padding:25px;
+}
+
+header h1{
+    margin-bottom:8px;
+}
+
+.terms{
+    height:500px;
+    overflow-y:auto;
+    padding:30px;
+    line-height:1.7;
+}
+
+h2{
+    margin-top:30px;
+    margin-bottom:10px;
+}
+
+.footer{
+    border-top:1px solid #ddd;
+    padding:25px;
+}
+
+label{
+    font-size:16px;
+}
+
+button{
+    margin-top:20px;
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    background:#2d7ef7;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:disabled{
+    background:#999;
+    cursor:not-allowed;
+}
+
+p{
+    margin-bottom:15px;
+    text-align:justify;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+<h1>Road Inspector</h1>
+<p>Terms & Conditions and Privacy Notice</p>
+</header>
+
+<div class="terms" id="terms">
+
+<h2>1. Introduction</h2>
+
+<p>Welcome to Road Inspector. This application has been developed as part of a science fair demonstration to showcase how modern technology can assist in identifying damaged roads and simplifying public reporting.</p>
+
+<p>By continuing to use this application you acknowledge that you have read and understood these terms.</p>
+
+<h2>2. Camera Access</h2>
+
+<p>The application requests permission to use your device camera solely for identifying visible road damage including potholes, cracks and similar defects.</p>
+
+<p>The application may capture photographs or screenshots when road defects are detected.</p>
+
+<h2>3. Location</h2>
+
+<p>If available, the application may associate approximate GPS coordinates with reports in order to identify the location of damaged roads.</p>
+
+<h2>4. User Information</h2>
+
+<p>Your name and email address may be requested before submitting a report. This information helps identify submissions and discourages misuse of the reporting system.</p>
+
+<h2>5. Report Submission</h2>
+
+<p>Submitted reports may contain photographs, timestamps, location information and descriptive details entered by the user.</p>
+
+<h2>6. Privacy</h2>
+
+<p>This project is intended for educational demonstration purposes. Information collected during demonstrations is not intended for commercial use.</p>
+
+<h2>7. Responsible Use</h2>
+
+<p>Users agree not to submit intentionally false reports, misleading information or inappropriate content.</p>
+
+<h2>8. Disclaimer</h2>
+
+<p>This software is a prototype created for educational purposes and may not always accurately detect road defects.</p>
+
+<h2>9. Consent</h2>
+
+<p>By accepting these Terms and Conditions you consent to the collection and use of the information described above solely for the purposes of demonstrating this project.</p>
+
+<h2>10. Additional Information</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer posuere, erat non tristique aliquam, massa erat viverra erat, vitae aliquet lorem lorem vel lacus.</p>
+
+<p>Vivamus at turpis sed tortor sollicitudin malesuada. Curabitur viverra leo ut odio ullamcorper, non viverra arcu luctus.</p>
+
+<p>Donec laoreet, nibh at faucibus pulvinar, nisi ligula volutpat nulla, sed feugiat lectus massa vitae risus.</p>
+
+<p>Sed gravida feugiat elit, at porta neque consequat nec. Vestibulum nec leo vitae risus facilisis dignissim.</p>
+
+<p>Aliquam erat volutpat. Sed sed odio in libero commodo feugiat.</p>
+
+<p>Praesent tempor massa sed mauris tincidunt gravida.</p>
+
+<p>Morbi non magna ut mauris pretium consectetur.</p>
+
+<p>Etiam pellentesque mauris eget magna ultrices luctus.</p>
+
+<p>Suspendisse potenti. Integer vel eros vitae lectus cursus laoreet.</p>
+
+<p>Curabitur commodo, nisi vitae consequat tincidunt, velit purus ultricies augue, sed feugiat arcu justo non ipsum.</p>
+
+<p>Nullam eu lacus ut orci vulputate pellentesque.</p>
+
+<p>Phasellus consequat risus sit amet orci tincidunt, vitae volutpat augue consectetur.</p>
+
+<p>Donec maximus felis vitae magna feugiat feugiat.</p>
+
+<p>Nam faucibus sem ut nisl placerat, sed suscipit odio laoreet.</p>
+
+<p>Integer convallis sapien ac sem tincidunt, sit amet tempus velit cursus.</p>
+
+<p>Vestibulum condimentum sapien vitae magna luctus aliquet.</p>
+
+<p>Thank you for taking the time to read these Terms and Conditions.</p>
+
+</div>
+
+<div class="footer">
+
+<label>
+<input type="checkbox" id="agree" disabled>
+I have read and agree to the Terms & Conditions.
+</label>
+
+<button id="continue" disabled>Continue</button>
+
+</div>
+
+</div>
+
+<script>
+
+const terms=document.getElementById("terms");
+const checkbox=document.getElementById("agree");
+const button=document.getElementById("continue");
+
+terms.addEventListener("scroll",()=>{
+
+if(terms.scrollTop + terms.clientHeight >= terms.scrollHeight-5){
+
+checkbox.disabled=false;
+
+}
+
+});
+
+checkbox.addEventListener("change",()=>{
+
+button.disabled=!checkbox.checked;
+
+});
+
+button.onclick=()=>{
+
+window.location.href="https://moduforgex.github.io/Road_Inspector";
+
+};
+
+</script>
+
+</body>
+</html>
